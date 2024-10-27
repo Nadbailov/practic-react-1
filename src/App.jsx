@@ -10,6 +10,7 @@ import {
 
 import article from 'data/article.json';
 import stats from 'data/stats.json';
+import transactions from 'data/transactions.json';
 
 // console.log(article);
 export const App = () => {
@@ -27,14 +28,12 @@ export const App = () => {
           postedAt={article.postedAt}
         />
         <Heading title="Task 2 Statistics" top bottom />
-
         <Statistics title="Main Statistics" stats={stats} />
         <Statistics stats={stats} />
-
         <Heading title="Task 3 Forbes list" top bottom />
         <ForbesList />
         <Heading title="Task 4 Crypto history" top bottom />
-        <CryptoHistory />
+        <CryptoHistory items={transactions} />
       </Container>
     </Section>
   );
